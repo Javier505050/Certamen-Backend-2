@@ -1,0 +1,105 @@
+Proyecto Django — Inventario Escolar
+
+Este es un proyecto desarrollado con Django, el framework web de Python, que permite crear aplicaciones seguras, escalables y mantenibles. El objetivo del proyecto es describir brevemente el propósito de la aplicación.
+
+REQUISITOS PREVIOS
+
+Python 3.10 o superior
+
+Pip
+
+Virtualenv (opcional pero recomendado)
+
+Git
+
+INSTALACIÓN Y CONFIGURACIÓN
+
+Clonar el repositorio
+git clone https://github.com/tuusuario/nombre-del-proyecto.git
+
+cd nombre-del-proyecto
+
+Crear y activar entorno virtual
+Windows:
+python -m venv venv
+venv\Scripts\activate
+
+Mac/Linux:
+python3 -m venv venv
+source venv/bin/activate
+
+Instalar dependencias
+pip install -r requirements.txt
+
+Configurar variables de entorno
+Crear un archivo .env en la raíz del proyecto con el siguiente contenido:
+SECRET_KEY=tu_clave_secreta
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+DATABASE_URL=sqlite:///db.sqlite3
+
+Migrar la base de datos
+python manage.py migrate
+
+Crear superusuario (opcional)
+python manage.py createsuperuser
+
+Ejecutar el servidor
+python manage.py runserver
+
+Luego, acceder al proyecto en el navegador:
+http://127.0.0.1:8000/
+
+ESTRUCTURA DEL PROYECTO
+nombre-del-proyecto/
+│
+├── manage.py
+├── requirements.txt
+├── .env.example
+├── README.md
+│
+├── app_principal/
+│ ├── models.py
+│ ├── views.py
+│ ├── urls.py
+│ └── templates/
+│
+├── nombre_del_proyecto/
+│ ├── settings.py
+│ ├── urls.py
+│ ├── asgi.py
+│ └── wsgi.py
+│
+└── static/
+
+EJECUCIÓN DE TESTS
+python manage.py test
+
+TECNOLOGÍAS USADAS
+
+Python
+
+Django
+
+SQLite o PostgreSQL
+
+HTML, CSS, JavaScript
+
+CONTRIBUIR
+
+Hacer un fork del repositorio
+
+Crear una nueva rama
+git checkout -b feature/nueva-funcionalidad
+
+Realizar los cambios y hacer commit
+git commit -m "Agrega nueva funcionalidad"
+
+Subir los cambios
+git push origin feature/nueva-funcionalidad
+
+Crear un Pull Request
+
+LICENCIA
+Este proyecto se distribuye bajo la licencia MIT.
+Puede ser utilizado libremente mencionando al autor original.
